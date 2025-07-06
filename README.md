@@ -1,26 +1,25 @@
 # Voice Assistant using Python
 
-This project demonstrates how to build a simple voice assistant using Python, with all code and analysis provided in Jupyter Notebooks.
-
-## Overview
-
-The repository showcases the workflow of developing a voice-activated assistant capable of recognizing and responding to user commands. It covers audio input processing, speech recognition, and response generation, making it suitable for students, hobbyists, and anyone interested in speech-based applications.
+This project demonstrates how to build a simple voice assistant using Python in a Jupyter Notebook environment. The assistant can recognize text commands (typed as input), respond with speech (or print if speech is not supported), and perform simple actions like searching Wikipedia, opening websites, telling jokes, and reporting the current time.
 
 ## Features
 
-- Audio recording and processing
-- Speech recognition using Python libraries
-- Command handling and response logic
-- Modular and extensible notebook-based code
+- Greets the user according to the time of day
+- Recognizes and processes user commands (typed, not spoken in Colab)
+- Searches Wikipedia and summarizes results
+- Opens YouTube or Google in a web browser
+- Tells the current system time
+- Tells a random programming joke
+- Gracefully exits on command
 
-## Tools Used
+## Tools & Libraries Used
 
-- **Jupyter Notebook**: Interactive coding and documentation
-- **SpeechRecognition**: Speech-to-text conversion
-- **PyAudio** or **sounddevice**: Audio recording and playback
-- **Python standard libraries**: For logic and utility functions
-- **Pandas**: Data handling (if used)
-- **Other NLP/speech libraries**: (Optional, e.g., pyttsx3 for text-to-speech)
+- **Jupyter Notebook**: Interactive development and demonstration
+- **SpeechRecognition**: (Listed as dependency, but not used for voice input in Colab)
+- **pyttsx3**: Text-to-speech (with print fallback for Colab)
+- **wikipedia**: To fetch and summarize Wikipedia articles
+- **pyjokes**: For programming jokes
+- **Standard Python libraries**: `datetime`, `webbrowser`, `os`
 
 ## Getting Started
 
@@ -37,11 +36,10 @@ git clone https://github.com/utkarsh884/Voice-Assistant-using-python.git
 cd Voice-Assistant-using-python
 ```
 
-Install dependencies (if a `requirements.txt` file is provided):
+Install dependencies (directly from the notebook, or manually):
 ```bash
-pip install -r requirements.txt
+pip install SpeechRecognition pyttsx3 wikipedia pyjokes
 ```
-Otherwise, install dependencies as specified in the notebooks.
 
 ### Usage
 
@@ -49,21 +47,35 @@ Otherwise, install dependencies as specified in the notebooks.
     ```bash
     jupyter notebook
     ```
-2. Open the relevant notebook(s) and follow the instructions to run the voice assistant workflow.
+2. Open `Voice_Assistant_using_python.ipynb` and run the cells in order.
+3. Type your commands when prompted (speech input is not supported in Colab).
+
+#### Example Commands
+
+- `open wikipedia python programming`
+- `open youtube`
+- `open google`
+- `what time is it`
+- `tell me a joke`
+- `bye`
 
 ## Project Structure
 
-- `notebooks/` – Main Jupyter Notebooks with code and analysis
-- `data/` – Sample audio files (if provided)
-- `requirements.txt` – Python dependencies (if available)
+- `Voice_Assistant_using_python.ipynb` – Main notebook with all code and instructions
+- `README.md` – Project documentation
+
+## Limitations
+
+- Voice input is not supported in Colab; user must type commands.
+- For text-to-speech, if running in Colab or a restricted environment, output will fall back to text.
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request for new features, improvements, or bug fixes.
+Contributions are welcome! Please open an issue or submit a pull request for improvements or bug fixes.
 
 ## License
 
-This project is licensed under the MIT License.
+No license specified. If you wish to use or distribute this project, please contact the repository owner.
 
 ## Contact
 
